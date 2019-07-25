@@ -1,7 +1,8 @@
 FROM ros:kinetic-perception-xenial
 
+# Copy the used files from the repository to the image
+# Gitlab CI clones the repo into the docker container
 COPY package.list .
-COPY build.bash /
 
 SHELL ["/bin/bash", "-c"]
 

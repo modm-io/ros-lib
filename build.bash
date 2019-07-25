@@ -19,4 +19,10 @@ rm ros_lib/ros.h
 rm -rf ros_lib/rosserial_arduino
 rm -rf ros_lib/rosserial_mbed
 
+# Remove trailing whitespaces
+find . -type f -name '*.h' -exec sed --in-place 's/[[:space:]]\+$//' {} \+
+
+# Replace 1e9 and 1e-9 with double(...)
+find . -type f \( -name 'duration.h' -o -name 'time.h' \) -exec sed --in-place --regexp-extended 's/(1e9|1e-9)/double(\1)/g' {} \+
+
 git status
