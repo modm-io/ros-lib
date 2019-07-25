@@ -54,10 +54,10 @@ namespace std_msgs
     {
       int offset = 0;
       offset += this->layout.deserialize(inbuffer + offset);
-      uint32_t data_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      data_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      data_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      data_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t data_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      data_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      data_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      data_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->data_length);
       if(data_lengthT > data_length)
         this->data = (float*)realloc(this->data, data_lengthT * sizeof(float));

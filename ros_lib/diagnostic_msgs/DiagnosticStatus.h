@@ -113,10 +113,10 @@ namespace diagnostic_msgs
       inbuffer[offset+length_hardware_id-1]=0;
       this->hardware_id = (char *)(inbuffer + offset-1);
       offset += length_hardware_id;
-      uint32_t values_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      values_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      values_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      values_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t values_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      values_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      values_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      values_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->values_length);
       if(values_lengthT > values_length)
         this->values = (diagnostic_msgs::KeyValue*)realloc(this->values, values_lengthT * sizeof(diagnostic_msgs::KeyValue));

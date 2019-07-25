@@ -96,10 +96,10 @@ namespace dynamic_reconfigure
     virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
-      uint32_t bools_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      bools_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      bools_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      bools_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t bools_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      bools_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      bools_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      bools_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->bools_length);
       if(bools_lengthT > bools_length)
         this->bools = (dynamic_reconfigure::BoolParameter*)realloc(this->bools, bools_lengthT * sizeof(dynamic_reconfigure::BoolParameter));
@@ -108,10 +108,10 @@ namespace dynamic_reconfigure
       offset += this->st_bools.deserialize(inbuffer + offset);
         memcpy( &(this->bools[i]), &(this->st_bools), sizeof(dynamic_reconfigure::BoolParameter));
       }
-      uint32_t ints_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      ints_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      ints_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      ints_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t ints_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      ints_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      ints_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      ints_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->ints_length);
       if(ints_lengthT > ints_length)
         this->ints = (dynamic_reconfigure::IntParameter*)realloc(this->ints, ints_lengthT * sizeof(dynamic_reconfigure::IntParameter));
@@ -120,10 +120,10 @@ namespace dynamic_reconfigure
       offset += this->st_ints.deserialize(inbuffer + offset);
         memcpy( &(this->ints[i]), &(this->st_ints), sizeof(dynamic_reconfigure::IntParameter));
       }
-      uint32_t strs_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      strs_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      strs_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      strs_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t strs_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      strs_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      strs_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      strs_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->strs_length);
       if(strs_lengthT > strs_length)
         this->strs = (dynamic_reconfigure::StrParameter*)realloc(this->strs, strs_lengthT * sizeof(dynamic_reconfigure::StrParameter));
@@ -132,10 +132,10 @@ namespace dynamic_reconfigure
       offset += this->st_strs.deserialize(inbuffer + offset);
         memcpy( &(this->strs[i]), &(this->st_strs), sizeof(dynamic_reconfigure::StrParameter));
       }
-      uint32_t doubles_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      doubles_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      doubles_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      doubles_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t doubles_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      doubles_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      doubles_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      doubles_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->doubles_length);
       if(doubles_lengthT > doubles_length)
         this->doubles = (dynamic_reconfigure::DoubleParameter*)realloc(this->doubles, doubles_lengthT * sizeof(dynamic_reconfigure::DoubleParameter));
@@ -144,10 +144,10 @@ namespace dynamic_reconfigure
       offset += this->st_doubles.deserialize(inbuffer + offset);
         memcpy( &(this->doubles[i]), &(this->st_doubles), sizeof(dynamic_reconfigure::DoubleParameter));
       }
-      uint32_t groups_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      groups_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      groups_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      groups_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t groups_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      groups_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      groups_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      groups_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->groups_length);
       if(groups_lengthT > groups_length)
         this->groups = (dynamic_reconfigure::GroupState*)realloc(this->groups, groups_lengthT * sizeof(dynamic_reconfigure::GroupState));

@@ -46,10 +46,10 @@ namespace actionlib_msgs
     {
       int offset = 0;
       offset += this->header.deserialize(inbuffer + offset);
-      uint32_t status_list_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      status_list_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      status_list_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      status_list_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t status_list_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      status_list_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      status_list_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      status_list_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->status_list_length);
       if(status_list_lengthT > status_list_length)
         this->status_list = (actionlib_msgs::GoalStatus*)realloc(this->status_list, status_list_lengthT * sizeof(actionlib_msgs::GoalStatus));

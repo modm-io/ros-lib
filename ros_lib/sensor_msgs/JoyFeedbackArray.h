@@ -40,10 +40,10 @@ namespace sensor_msgs
     virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
-      uint32_t array_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      array_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      array_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      array_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t array_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      array_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      array_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      array_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->array_length);
       if(array_lengthT > array_length)
         this->array = (sensor_msgs::JoyFeedback*)realloc(this->array, array_lengthT * sizeof(sensor_msgs::JoyFeedback));

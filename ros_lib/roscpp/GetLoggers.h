@@ -66,10 +66,10 @@ static const char GETLOGGERS[] = "roscpp/GetLoggers";
     virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
-      uint32_t loggers_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      loggers_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      loggers_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      loggers_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t loggers_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      loggers_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      loggers_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      loggers_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->loggers_length);
       if(loggers_lengthT > loggers_length)
         this->loggers = (roscpp::Logger*)realloc(this->loggers, loggers_lengthT * sizeof(roscpp::Logger));

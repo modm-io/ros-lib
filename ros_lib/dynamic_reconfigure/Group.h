@@ -100,10 +100,10 @@ namespace dynamic_reconfigure
       inbuffer[offset+length_type-1]=0;
       this->type = (char *)(inbuffer + offset-1);
       offset += length_type;
-      uint32_t parameters_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      parameters_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      parameters_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      parameters_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t parameters_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      parameters_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      parameters_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      parameters_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->parameters_length);
       if(parameters_lengthT > parameters_length)
         this->parameters = (dynamic_reconfigure::ParamDescription*)realloc(this->parameters, parameters_lengthT * sizeof(dynamic_reconfigure::ParamDescription));

@@ -66,10 +66,10 @@ static const char SETMAPPROJECTIONS[] = "map_msgs/SetMapProjections";
     virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
-      uint32_t projected_maps_info_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      projected_maps_info_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      projected_maps_info_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      projected_maps_info_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t projected_maps_info_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      projected_maps_info_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      projected_maps_info_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      projected_maps_info_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->projected_maps_info_length);
       if(projected_maps_info_lengthT > projected_maps_info_length)
         this->projected_maps_info = (map_msgs::ProjectedMapInfo*)realloc(this->projected_maps_info, projected_maps_info_lengthT * sizeof(map_msgs::ProjectedMapInfo));

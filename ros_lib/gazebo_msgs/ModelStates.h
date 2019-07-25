@@ -71,10 +71,10 @@ namespace gazebo_msgs
     virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
-      uint32_t name_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      name_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      name_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      name_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t name_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      name_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      name_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      name_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->name_length);
       if(name_lengthT > name_length)
         this->name = (char**)realloc(this->name, name_lengthT * sizeof(char*));
@@ -91,10 +91,10 @@ namespace gazebo_msgs
       offset += length_st_name;
         memcpy( &(this->name[i]), &(this->st_name), sizeof(char*));
       }
-      uint32_t pose_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      pose_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      pose_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      pose_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t pose_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      pose_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      pose_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      pose_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->pose_length);
       if(pose_lengthT > pose_length)
         this->pose = (geometry_msgs::Pose*)realloc(this->pose, pose_lengthT * sizeof(geometry_msgs::Pose));
@@ -103,10 +103,10 @@ namespace gazebo_msgs
       offset += this->st_pose.deserialize(inbuffer + offset);
         memcpy( &(this->pose[i]), &(this->st_pose), sizeof(geometry_msgs::Pose));
       }
-      uint32_t twist_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      twist_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      twist_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      twist_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t twist_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      twist_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      twist_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      twist_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->twist_length);
       if(twist_lengthT > twist_length)
         this->twist = (geometry_msgs::Twist*)realloc(this->twist, twist_lengthT * sizeof(geometry_msgs::Twist));

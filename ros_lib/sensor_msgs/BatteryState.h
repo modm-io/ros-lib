@@ -274,10 +274,10 @@ namespace sensor_msgs
       u_present.base |= ((uint8_t) (*(inbuffer + offset + 0))) << (8 * 0);
       this->present = u_present.real;
       offset += sizeof(this->present);
-      uint32_t cell_voltage_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      cell_voltage_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      cell_voltage_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      cell_voltage_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t cell_voltage_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      cell_voltage_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      cell_voltage_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      cell_voltage_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->cell_voltage_length);
       if(cell_voltage_lengthT > cell_voltage_length)
         this->cell_voltage = (float*)realloc(this->cell_voltage, cell_voltage_lengthT * sizeof(float));

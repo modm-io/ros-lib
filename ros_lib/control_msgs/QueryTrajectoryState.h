@@ -171,10 +171,10 @@ static const char QUERYTRAJECTORYSTATE[] = "control_msgs/QueryTrajectoryState";
     virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
-      uint32_t name_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      name_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      name_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      name_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t name_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      name_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      name_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      name_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->name_length);
       if(name_lengthT > name_length)
         this->name = (char**)realloc(this->name, name_lengthT * sizeof(char*));
@@ -191,10 +191,10 @@ static const char QUERYTRAJECTORYSTATE[] = "control_msgs/QueryTrajectoryState";
       offset += length_st_name;
         memcpy( &(this->name[i]), &(this->st_name), sizeof(char*));
       }
-      uint32_t position_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      position_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      position_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      position_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t position_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      position_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      position_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      position_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->position_length);
       if(position_lengthT > position_length)
         this->position = (double*)realloc(this->position, position_lengthT * sizeof(double));
@@ -217,10 +217,10 @@ static const char QUERYTRAJECTORYSTATE[] = "control_msgs/QueryTrajectoryState";
       offset += sizeof(this->st_position);
         memcpy( &(this->position[i]), &(this->st_position), sizeof(double));
       }
-      uint32_t velocity_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      velocity_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      velocity_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      velocity_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t velocity_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      velocity_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      velocity_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      velocity_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->velocity_length);
       if(velocity_lengthT > velocity_length)
         this->velocity = (double*)realloc(this->velocity, velocity_lengthT * sizeof(double));
@@ -243,10 +243,10 @@ static const char QUERYTRAJECTORYSTATE[] = "control_msgs/QueryTrajectoryState";
       offset += sizeof(this->st_velocity);
         memcpy( &(this->velocity[i]), &(this->st_velocity), sizeof(double));
       }
-      uint32_t acceleration_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      acceleration_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      acceleration_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      acceleration_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t acceleration_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      acceleration_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      acceleration_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      acceleration_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->acceleration_length);
       if(acceleration_lengthT > acceleration_length)
         this->acceleration = (double*)realloc(this->acceleration, acceleration_lengthT * sizeof(double));

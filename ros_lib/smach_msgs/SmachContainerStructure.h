@@ -134,10 +134,10 @@ namespace smach_msgs
       inbuffer[offset+length_path-1]=0;
       this->path = (char *)(inbuffer + offset-1);
       offset += length_path;
-      uint32_t children_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      children_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      children_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      children_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t children_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      children_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      children_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      children_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->children_length);
       if(children_lengthT > children_length)
         this->children = (char**)realloc(this->children, children_lengthT * sizeof(char*));
@@ -154,10 +154,10 @@ namespace smach_msgs
       offset += length_st_children;
         memcpy( &(this->children[i]), &(this->st_children), sizeof(char*));
       }
-      uint32_t internal_outcomes_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      internal_outcomes_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      internal_outcomes_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      internal_outcomes_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t internal_outcomes_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      internal_outcomes_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      internal_outcomes_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      internal_outcomes_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->internal_outcomes_length);
       if(internal_outcomes_lengthT > internal_outcomes_length)
         this->internal_outcomes = (char**)realloc(this->internal_outcomes, internal_outcomes_lengthT * sizeof(char*));
@@ -174,10 +174,10 @@ namespace smach_msgs
       offset += length_st_internal_outcomes;
         memcpy( &(this->internal_outcomes[i]), &(this->st_internal_outcomes), sizeof(char*));
       }
-      uint32_t outcomes_from_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      outcomes_from_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      outcomes_from_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      outcomes_from_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t outcomes_from_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      outcomes_from_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      outcomes_from_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      outcomes_from_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->outcomes_from_length);
       if(outcomes_from_lengthT > outcomes_from_length)
         this->outcomes_from = (char**)realloc(this->outcomes_from, outcomes_from_lengthT * sizeof(char*));
@@ -194,10 +194,10 @@ namespace smach_msgs
       offset += length_st_outcomes_from;
         memcpy( &(this->outcomes_from[i]), &(this->st_outcomes_from), sizeof(char*));
       }
-      uint32_t outcomes_to_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      outcomes_to_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      outcomes_to_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      outcomes_to_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t outcomes_to_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      outcomes_to_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      outcomes_to_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      outcomes_to_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->outcomes_to_length);
       if(outcomes_to_lengthT > outcomes_to_length)
         this->outcomes_to = (char**)realloc(this->outcomes_to, outcomes_to_lengthT * sizeof(char*));
@@ -214,10 +214,10 @@ namespace smach_msgs
       offset += length_st_outcomes_to;
         memcpy( &(this->outcomes_to[i]), &(this->st_outcomes_to), sizeof(char*));
       }
-      uint32_t container_outcomes_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      container_outcomes_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      container_outcomes_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      container_outcomes_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t container_outcomes_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      container_outcomes_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      container_outcomes_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      container_outcomes_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->container_outcomes_length);
       if(container_outcomes_lengthT > container_outcomes_length)
         this->container_outcomes = (char**)realloc(this->container_outcomes, container_outcomes_lengthT * sizeof(char*));

@@ -63,10 +63,10 @@ namespace trajectory_msgs
     {
       int offset = 0;
       offset += this->header.deserialize(inbuffer + offset);
-      uint32_t joint_names_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t joint_names_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->joint_names_length);
       if(joint_names_lengthT > joint_names_length)
         this->joint_names = (char**)realloc(this->joint_names, joint_names_lengthT * sizeof(char*));
@@ -83,10 +83,10 @@ namespace trajectory_msgs
       offset += length_st_joint_names;
         memcpy( &(this->joint_names[i]), &(this->st_joint_names), sizeof(char*));
       }
-      uint32_t points_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t points_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->points_length);
       if(points_lengthT > points_length)
         this->points = (trajectory_msgs::MultiDOFJointTrajectoryPoint*)realloc(this->points, points_lengthT * sizeof(trajectory_msgs::MultiDOFJointTrajectoryPoint));

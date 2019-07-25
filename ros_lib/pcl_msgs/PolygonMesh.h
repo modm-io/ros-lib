@@ -52,10 +52,10 @@ namespace pcl_msgs
       int offset = 0;
       offset += this->header.deserialize(inbuffer + offset);
       offset += this->cloud.deserialize(inbuffer + offset);
-      uint32_t polygons_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      polygons_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      polygons_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      polygons_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t polygons_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      polygons_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      polygons_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      polygons_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->polygons_length);
       if(polygons_lengthT > polygons_length)
         this->polygons = (pcl_msgs::Vertices*)realloc(this->polygons, polygons_lengthT * sizeof(pcl_msgs::Vertices));

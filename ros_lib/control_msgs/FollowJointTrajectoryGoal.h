@@ -73,10 +73,10 @@ namespace control_msgs
     {
       int offset = 0;
       offset += this->trajectory.deserialize(inbuffer + offset);
-      uint32_t path_tolerance_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      path_tolerance_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      path_tolerance_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      path_tolerance_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t path_tolerance_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      path_tolerance_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      path_tolerance_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      path_tolerance_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->path_tolerance_length);
       if(path_tolerance_lengthT > path_tolerance_length)
         this->path_tolerance = (control_msgs::JointTolerance*)realloc(this->path_tolerance, path_tolerance_lengthT * sizeof(control_msgs::JointTolerance));
@@ -85,10 +85,10 @@ namespace control_msgs
       offset += this->st_path_tolerance.deserialize(inbuffer + offset);
         memcpy( &(this->path_tolerance[i]), &(this->st_path_tolerance), sizeof(control_msgs::JointTolerance));
       }
-      uint32_t goal_tolerance_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      goal_tolerance_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      goal_tolerance_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      goal_tolerance_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t goal_tolerance_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      goal_tolerance_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      goal_tolerance_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      goal_tolerance_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->goal_tolerance_length);
       if(goal_tolerance_lengthT > goal_tolerance_length)
         this->goal_tolerance = (control_msgs::JointTolerance*)realloc(this->goal_tolerance, goal_tolerance_lengthT * sizeof(control_msgs::JointTolerance));

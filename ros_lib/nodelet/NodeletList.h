@@ -69,10 +69,10 @@ static const char NODELETLIST[] = "nodelet/NodeletList";
     virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
-      uint32_t nodelets_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      nodelets_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      nodelets_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      nodelets_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t nodelets_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      nodelets_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      nodelets_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      nodelets_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->nodelets_length);
       if(nodelets_lengthT > nodelets_length)
         this->nodelets = (char**)realloc(this->nodelets, nodelets_lengthT * sizeof(char*));

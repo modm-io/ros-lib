@@ -48,10 +48,10 @@ namespace std_msgs
     virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
-      uint32_t dim_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      dim_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      dim_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      dim_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t dim_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      dim_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      dim_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      dim_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->dim_length);
       if(dim_lengthT > dim_length)
         this->dim = (std_msgs::MultiArrayDimension*)realloc(this->dim, dim_lengthT * sizeof(std_msgs::MultiArrayDimension));

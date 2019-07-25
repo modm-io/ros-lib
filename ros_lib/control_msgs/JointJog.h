@@ -118,10 +118,10 @@ namespace control_msgs
     {
       int offset = 0;
       offset += this->header.deserialize(inbuffer + offset);
-      uint32_t joint_names_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t joint_names_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->joint_names_length);
       if(joint_names_lengthT > joint_names_length)
         this->joint_names = (char**)realloc(this->joint_names, joint_names_lengthT * sizeof(char*));
@@ -138,10 +138,10 @@ namespace control_msgs
       offset += length_st_joint_names;
         memcpy( &(this->joint_names[i]), &(this->st_joint_names), sizeof(char*));
       }
-      uint32_t displacements_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      displacements_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      displacements_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      displacements_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t displacements_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      displacements_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      displacements_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      displacements_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->displacements_length);
       if(displacements_lengthT > displacements_length)
         this->displacements = (double*)realloc(this->displacements, displacements_lengthT * sizeof(double));
@@ -164,10 +164,10 @@ namespace control_msgs
       offset += sizeof(this->st_displacements);
         memcpy( &(this->displacements[i]), &(this->st_displacements), sizeof(double));
       }
-      uint32_t velocities_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t velocities_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->velocities_length);
       if(velocities_lengthT > velocities_length)
         this->velocities = (double*)realloc(this->velocities, velocities_lengthT * sizeof(double));

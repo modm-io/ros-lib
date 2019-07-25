@@ -81,10 +81,10 @@ namespace trajectory_msgs
     virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
-      uint32_t transforms_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      transforms_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      transforms_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      transforms_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t transforms_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      transforms_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      transforms_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      transforms_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->transforms_length);
       if(transforms_lengthT > transforms_length)
         this->transforms = (geometry_msgs::Transform*)realloc(this->transforms, transforms_lengthT * sizeof(geometry_msgs::Transform));
@@ -93,10 +93,10 @@ namespace trajectory_msgs
       offset += this->st_transforms.deserialize(inbuffer + offset);
         memcpy( &(this->transforms[i]), &(this->st_transforms), sizeof(geometry_msgs::Transform));
       }
-      uint32_t velocities_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t velocities_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->velocities_length);
       if(velocities_lengthT > velocities_length)
         this->velocities = (geometry_msgs::Twist*)realloc(this->velocities, velocities_lengthT * sizeof(geometry_msgs::Twist));
@@ -105,10 +105,10 @@ namespace trajectory_msgs
       offset += this->st_velocities.deserialize(inbuffer + offset);
         memcpy( &(this->velocities[i]), &(this->st_velocities), sizeof(geometry_msgs::Twist));
       }
-      uint32_t accelerations_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      accelerations_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      accelerations_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      accelerations_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t accelerations_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      accelerations_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      accelerations_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      accelerations_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->accelerations_length);
       if(accelerations_lengthT > accelerations_length)
         this->accelerations = (geometry_msgs::Twist*)realloc(this->accelerations, accelerations_lengthT * sizeof(geometry_msgs::Twist));

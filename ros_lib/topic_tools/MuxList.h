@@ -69,10 +69,10 @@ static const char MUXLIST[] = "topic_tools/MuxList";
     virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
-      uint32_t topics_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      topics_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      topics_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      topics_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t topics_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      topics_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      topics_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      topics_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->topics_length);
       if(topics_lengthT > topics_length)
         this->topics = (char**)realloc(this->topics, topics_lengthT * sizeof(char*));

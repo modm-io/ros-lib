@@ -53,10 +53,10 @@ namespace dynamic_reconfigure
     virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
-      uint32_t groups_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      groups_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      groups_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      groups_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t groups_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      groups_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      groups_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      groups_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->groups_length);
       if(groups_lengthT > groups_length)
         this->groups = (dynamic_reconfigure::Group*)realloc(this->groups, groups_lengthT * sizeof(dynamic_reconfigure::Group));

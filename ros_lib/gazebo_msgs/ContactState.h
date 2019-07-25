@@ -148,10 +148,10 @@ namespace gazebo_msgs
       inbuffer[offset+length_collision2_name-1]=0;
       this->collision2_name = (char *)(inbuffer + offset-1);
       offset += length_collision2_name;
-      uint32_t wrenches_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      wrenches_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      wrenches_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      wrenches_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t wrenches_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      wrenches_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      wrenches_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      wrenches_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->wrenches_length);
       if(wrenches_lengthT > wrenches_length)
         this->wrenches = (geometry_msgs::Wrench*)realloc(this->wrenches, wrenches_lengthT * sizeof(geometry_msgs::Wrench));
@@ -161,10 +161,10 @@ namespace gazebo_msgs
         memcpy( &(this->wrenches[i]), &(this->st_wrenches), sizeof(geometry_msgs::Wrench));
       }
       offset += this->total_wrench.deserialize(inbuffer + offset);
-      uint32_t contact_positions_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      contact_positions_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      contact_positions_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      contact_positions_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t contact_positions_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      contact_positions_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      contact_positions_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      contact_positions_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->contact_positions_length);
       if(contact_positions_lengthT > contact_positions_length)
         this->contact_positions = (geometry_msgs::Vector3*)realloc(this->contact_positions, contact_positions_lengthT * sizeof(geometry_msgs::Vector3));
@@ -173,10 +173,10 @@ namespace gazebo_msgs
       offset += this->st_contact_positions.deserialize(inbuffer + offset);
         memcpy( &(this->contact_positions[i]), &(this->st_contact_positions), sizeof(geometry_msgs::Vector3));
       }
-      uint32_t contact_normals_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      contact_normals_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      contact_normals_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      contact_normals_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t contact_normals_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      contact_normals_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      contact_normals_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      contact_normals_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->contact_normals_length);
       if(contact_normals_lengthT > contact_normals_length)
         this->contact_normals = (geometry_msgs::Vector3*)realloc(this->contact_normals, contact_normals_lengthT * sizeof(geometry_msgs::Vector3));
@@ -185,10 +185,10 @@ namespace gazebo_msgs
       offset += this->st_contact_normals.deserialize(inbuffer + offset);
         memcpy( &(this->contact_normals[i]), &(this->st_contact_normals), sizeof(geometry_msgs::Vector3));
       }
-      uint32_t depths_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      depths_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      depths_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      depths_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t depths_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      depths_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      depths_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      depths_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->depths_length);
       if(depths_lengthT > depths_length)
         this->depths = (double*)realloc(this->depths, depths_lengthT * sizeof(double));

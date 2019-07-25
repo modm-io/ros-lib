@@ -65,10 +65,10 @@ namespace sensor_msgs
       inbuffer[offset+length_name-1]=0;
       this->name = (char *)(inbuffer + offset-1);
       offset += length_name;
-      uint32_t values_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      values_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      values_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      values_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t values_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      values_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      values_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      values_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->values_length);
       if(values_lengthT > values_length)
         this->values = (float*)realloc(this->values, values_lengthT * sizeof(float));

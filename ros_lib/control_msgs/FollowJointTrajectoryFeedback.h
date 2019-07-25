@@ -62,10 +62,10 @@ namespace control_msgs
     {
       int offset = 0;
       offset += this->header.deserialize(inbuffer + offset);
-      uint32_t joint_names_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t joint_names_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->joint_names_length);
       if(joint_names_lengthT > joint_names_length)
         this->joint_names = (char**)realloc(this->joint_names, joint_names_lengthT * sizeof(char*));

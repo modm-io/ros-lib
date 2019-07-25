@@ -250,10 +250,10 @@ namespace visualization_msgs
       u_frame_locked.base |= ((uint8_t) (*(inbuffer + offset + 0))) << (8 * 0);
       this->frame_locked = u_frame_locked.real;
       offset += sizeof(this->frame_locked);
-      uint32_t points_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t points_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->points_length);
       if(points_lengthT > points_length)
         this->points = (geometry_msgs::Point*)realloc(this->points, points_lengthT * sizeof(geometry_msgs::Point));
@@ -262,10 +262,10 @@ namespace visualization_msgs
       offset += this->st_points.deserialize(inbuffer + offset);
         memcpy( &(this->points[i]), &(this->st_points), sizeof(geometry_msgs::Point));
       }
-      uint32_t colors_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      colors_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      colors_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      colors_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t colors_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      colors_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      colors_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      colors_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->colors_length);
       if(colors_lengthT > colors_length)
         this->colors = (std_msgs::ColorRGBA*)realloc(this->colors, colors_lengthT * sizeof(std_msgs::ColorRGBA));

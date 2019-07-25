@@ -126,10 +126,10 @@ namespace visualization_msgs
       u_always_visible.base |= ((uint8_t) (*(inbuffer + offset + 0))) << (8 * 0);
       this->always_visible = u_always_visible.real;
       offset += sizeof(this->always_visible);
-      uint32_t markers_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t markers_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->markers_length);
       if(markers_lengthT > markers_length)
         this->markers = (visualization_msgs::Marker*)realloc(this->markers, markers_lengthT * sizeof(visualization_msgs::Marker));

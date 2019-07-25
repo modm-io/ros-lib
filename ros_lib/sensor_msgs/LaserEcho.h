@@ -48,10 +48,10 @@ namespace sensor_msgs
     virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
-      uint32_t echoes_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      echoes_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      echoes_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      echoes_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t echoes_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      echoes_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      echoes_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      echoes_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->echoes_length);
       if(echoes_lengthT > echoes_length)
         this->echoes = (float*)realloc(this->echoes, echoes_lengthT * sizeof(float));

@@ -124,10 +124,10 @@ namespace visualization_msgs
       u_scale.base |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       this->scale = u_scale.real;
       offset += sizeof(this->scale);
-      uint32_t menu_entries_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      menu_entries_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      menu_entries_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      menu_entries_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t menu_entries_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      menu_entries_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      menu_entries_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      menu_entries_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->menu_entries_length);
       if(menu_entries_lengthT > menu_entries_length)
         this->menu_entries = (visualization_msgs::MenuEntry*)realloc(this->menu_entries, menu_entries_lengthT * sizeof(visualization_msgs::MenuEntry));
@@ -136,10 +136,10 @@ namespace visualization_msgs
       offset += this->st_menu_entries.deserialize(inbuffer + offset);
         memcpy( &(this->menu_entries[i]), &(this->st_menu_entries), sizeof(visualization_msgs::MenuEntry));
       }
-      uint32_t controls_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      controls_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      controls_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      controls_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t controls_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      controls_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      controls_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      controls_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->controls_length);
       if(controls_lengthT > controls_length)
         this->controls = (visualization_msgs::InteractiveMarkerControl*)realloc(this->controls, controls_lengthT * sizeof(visualization_msgs::InteractiveMarkerControl));

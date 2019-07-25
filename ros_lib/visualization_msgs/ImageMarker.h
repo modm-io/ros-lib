@@ -226,10 +226,10 @@ namespace visualization_msgs
       this->lifetime.nsec |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
       this->lifetime.nsec |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->lifetime.nsec);
-      uint32_t points_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t points_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      points_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->points_length);
       if(points_lengthT > points_length)
         this->points = (geometry_msgs::Point*)realloc(this->points, points_lengthT * sizeof(geometry_msgs::Point));
@@ -238,10 +238,10 @@ namespace visualization_msgs
       offset += this->st_points.deserialize(inbuffer + offset);
         memcpy( &(this->points[i]), &(this->st_points), sizeof(geometry_msgs::Point));
       }
-      uint32_t outline_colors_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      outline_colors_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      outline_colors_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      outline_colors_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t outline_colors_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      outline_colors_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      outline_colors_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      outline_colors_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->outline_colors_length);
       if(outline_colors_lengthT > outline_colors_length)
         this->outline_colors = (std_msgs::ColorRGBA*)realloc(this->outline_colors, outline_colors_lengthT * sizeof(std_msgs::ColorRGBA));

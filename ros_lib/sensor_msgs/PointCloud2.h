@@ -122,10 +122,10 @@ namespace sensor_msgs
       this->width |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
       this->width |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->width);
-      uint32_t fields_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      fields_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      fields_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      fields_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t fields_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      fields_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      fields_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      fields_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->fields_length);
       if(fields_lengthT > fields_length)
         this->fields = (sensor_msgs::PointField*)realloc(this->fields, fields_lengthT * sizeof(sensor_msgs::PointField));
@@ -152,10 +152,10 @@ namespace sensor_msgs
       this->row_step |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
       this->row_step |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->row_step);
-      uint32_t data_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      data_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      data_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      data_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t data_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      data_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      data_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      data_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->data_length);
       if(data_lengthT > data_length)
         this->data = (uint8_t*)realloc(this->data, data_lengthT * sizeof(uint8_t));

@@ -178,10 +178,10 @@ static const char GETJOINTPROPERTIES[] = "gazebo_msgs/GetJointProperties";
       int offset = 0;
       this->type =  ((uint8_t) (*(inbuffer + offset)));
       offset += sizeof(this->type);
-      uint32_t damping_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      damping_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      damping_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      damping_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t damping_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      damping_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      damping_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      damping_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->damping_length);
       if(damping_lengthT > damping_length)
         this->damping = (double*)realloc(this->damping, damping_lengthT * sizeof(double));
@@ -204,10 +204,10 @@ static const char GETJOINTPROPERTIES[] = "gazebo_msgs/GetJointProperties";
       offset += sizeof(this->st_damping);
         memcpy( &(this->damping[i]), &(this->st_damping), sizeof(double));
       }
-      uint32_t position_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      position_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      position_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      position_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t position_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      position_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      position_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      position_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->position_length);
       if(position_lengthT > position_length)
         this->position = (double*)realloc(this->position, position_lengthT * sizeof(double));
@@ -230,10 +230,10 @@ static const char GETJOINTPROPERTIES[] = "gazebo_msgs/GetJointProperties";
       offset += sizeof(this->st_position);
         memcpy( &(this->position[i]), &(this->st_position), sizeof(double));
       }
-      uint32_t rate_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      rate_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      rate_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      rate_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t rate_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      rate_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      rate_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      rate_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->rate_length);
       if(rate_lengthT > rate_length)
         this->rate = (double*)realloc(this->rate, rate_lengthT * sizeof(double));

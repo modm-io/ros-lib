@@ -81,10 +81,10 @@ namespace visualization_msgs
       u_seq_num.base |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       this->seq_num = u_seq_num.real;
       offset += sizeof(this->seq_num);
-      uint32_t markers_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t markers_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->markers_length);
       if(markers_lengthT > markers_length)
         this->markers = (visualization_msgs::InteractiveMarker*)realloc(this->markers, markers_lengthT * sizeof(visualization_msgs::InteractiveMarker));

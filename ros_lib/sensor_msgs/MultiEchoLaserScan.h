@@ -227,10 +227,10 @@ namespace sensor_msgs
       u_range_max.base |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       this->range_max = u_range_max.real;
       offset += sizeof(this->range_max);
-      uint32_t ranges_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      ranges_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      ranges_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      ranges_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t ranges_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      ranges_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      ranges_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      ranges_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->ranges_length);
       if(ranges_lengthT > ranges_length)
         this->ranges = (sensor_msgs::LaserEcho*)realloc(this->ranges, ranges_lengthT * sizeof(sensor_msgs::LaserEcho));
@@ -239,10 +239,10 @@ namespace sensor_msgs
       offset += this->st_ranges.deserialize(inbuffer + offset);
         memcpy( &(this->ranges[i]), &(this->st_ranges), sizeof(sensor_msgs::LaserEcho));
       }
-      uint32_t intensities_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      intensities_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      intensities_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      intensities_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t intensities_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      intensities_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      intensities_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      intensities_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->intensities_length);
       if(intensities_lengthT > intensities_length)
         this->intensities = (sensor_msgs::LaserEcho*)realloc(this->intensities, intensities_lengthT * sizeof(sensor_msgs::LaserEcho));

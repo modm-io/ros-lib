@@ -94,10 +94,10 @@ namespace nav_msgs
       u_cell_height.base |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       this->cell_height = u_cell_height.real;
       offset += sizeof(this->cell_height);
-      uint32_t cells_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      cells_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      cells_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      cells_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t cells_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      cells_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      cells_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      cells_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->cells_length);
       if(cells_lengthT > cells_length)
         this->cells = (geometry_msgs::Point*)realloc(this->cells, cells_lengthT * sizeof(geometry_msgs::Point));

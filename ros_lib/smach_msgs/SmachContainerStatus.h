@@ -99,10 +99,10 @@ namespace smach_msgs
       inbuffer[offset+length_path-1]=0;
       this->path = (char *)(inbuffer + offset-1);
       offset += length_path;
-      uint32_t initial_states_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      initial_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      initial_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      initial_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t initial_states_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      initial_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      initial_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      initial_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->initial_states_length);
       if(initial_states_lengthT > initial_states_length)
         this->initial_states = (char**)realloc(this->initial_states, initial_states_lengthT * sizeof(char*));
@@ -119,10 +119,10 @@ namespace smach_msgs
       offset += length_st_initial_states;
         memcpy( &(this->initial_states[i]), &(this->st_initial_states), sizeof(char*));
       }
-      uint32_t active_states_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      active_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      active_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      active_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t active_states_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      active_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      active_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      active_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->active_states_length);
       if(active_states_lengthT > active_states_length)
         this->active_states = (char**)realloc(this->active_states, active_states_lengthT * sizeof(char*));

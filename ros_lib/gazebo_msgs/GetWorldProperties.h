@@ -129,10 +129,10 @@ static const char GETWORLDPROPERTIES[] = "gazebo_msgs/GetWorldProperties";
       u_sim_time.base |= ((uint64_t) (*(inbuffer + offset + 7))) << (8 * 7);
       this->sim_time = u_sim_time.real;
       offset += sizeof(this->sim_time);
-      uint32_t model_names_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      model_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      model_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      model_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t model_names_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      model_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      model_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      model_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->model_names_length);
       if(model_names_lengthT > model_names_length)
         this->model_names = (char**)realloc(this->model_names, model_names_lengthT * sizeof(char*));

@@ -46,10 +46,10 @@ namespace gazebo_msgs
     {
       int offset = 0;
       offset += this->header.deserialize(inbuffer + offset);
-      uint32_t states_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      states_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      states_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      states_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t states_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      states_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      states_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      states_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->states_length);
       if(states_lengthT > states_length)
         this->states = (gazebo_msgs::ContactState*)realloc(this->states, states_lengthT * sizeof(gazebo_msgs::ContactState));

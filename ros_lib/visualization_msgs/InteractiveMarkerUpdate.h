@@ -121,10 +121,10 @@ namespace visualization_msgs
       offset += sizeof(this->seq_num);
       this->type =  ((uint8_t) (*(inbuffer + offset)));
       offset += sizeof(this->type);
-      uint32_t markers_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t markers_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      markers_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->markers_length);
       if(markers_lengthT > markers_length)
         this->markers = (visualization_msgs::InteractiveMarker*)realloc(this->markers, markers_lengthT * sizeof(visualization_msgs::InteractiveMarker));
@@ -133,10 +133,10 @@ namespace visualization_msgs
       offset += this->st_markers.deserialize(inbuffer + offset);
         memcpy( &(this->markers[i]), &(this->st_markers), sizeof(visualization_msgs::InteractiveMarker));
       }
-      uint32_t poses_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      poses_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      poses_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      poses_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t poses_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      poses_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      poses_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      poses_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->poses_length);
       if(poses_lengthT > poses_length)
         this->poses = (visualization_msgs::InteractiveMarkerPose*)realloc(this->poses, poses_lengthT * sizeof(visualization_msgs::InteractiveMarkerPose));
@@ -145,10 +145,10 @@ namespace visualization_msgs
       offset += this->st_poses.deserialize(inbuffer + offset);
         memcpy( &(this->poses[i]), &(this->st_poses), sizeof(visualization_msgs::InteractiveMarkerPose));
       }
-      uint32_t erases_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      erases_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      erases_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      erases_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t erases_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      erases_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      erases_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      erases_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->erases_length);
       if(erases_lengthT > erases_length)
         this->erases = (char**)realloc(this->erases, erases_lengthT * sizeof(char*));

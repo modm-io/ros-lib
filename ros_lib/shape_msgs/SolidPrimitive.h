@@ -71,10 +71,10 @@ namespace shape_msgs
       int offset = 0;
       this->type =  ((uint8_t) (*(inbuffer + offset)));
       offset += sizeof(this->type);
-      uint32_t dimensions_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      dimensions_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      dimensions_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      dimensions_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t dimensions_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      dimensions_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      dimensions_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      dimensions_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->dimensions_length);
       if(dimensions_lengthT > dimensions_length)
         this->dimensions = (double*)realloc(this->dimensions, dimensions_lengthT * sizeof(double));

@@ -56,12 +56,12 @@ public:
 
   double toSec() const
   {
-    return (double)sec + 1e-9 * (double)nsec;
+    return (double)sec + double(1e-9) * (double)nsec;
   };
   void fromSec(double t)
   {
     sec = (uint32_t) floor(t);
-    nsec = (uint32_t) round((t - sec) * 1e9);
+    nsec = (uint32_t) round((t - sec) * double(1e9));
   };
 
   uint32_t toNsec()

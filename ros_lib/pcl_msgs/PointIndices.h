@@ -54,10 +54,10 @@ namespace pcl_msgs
     {
       int offset = 0;
       offset += this->header.deserialize(inbuffer + offset);
-      uint32_t indices_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      indices_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      indices_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      indices_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t indices_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      indices_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      indices_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      indices_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->indices_length);
       if(indices_lengthT > indices_length)
         this->indices = (int32_t*)realloc(this->indices, indices_lengthT * sizeof(int32_t));

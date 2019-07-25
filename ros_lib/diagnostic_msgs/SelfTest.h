@@ -101,10 +101,10 @@ static const char SELFTEST[] = "diagnostic_msgs/SelfTest";
       u_passed.base |= ((uint8_t) (*(inbuffer + offset + 0))) << (8 * 0);
       this->passed = u_passed.real;
       offset += sizeof(this->passed);
-      uint32_t status_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      status_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      status_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      status_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t status_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      status_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      status_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      status_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->status_length);
       if(status_lengthT > status_length)
         this->status = (diagnostic_msgs::DiagnosticStatus*)realloc(this->status, status_lengthT * sizeof(diagnostic_msgs::DiagnosticStatus));

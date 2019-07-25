@@ -76,10 +76,10 @@ namespace sensor_msgs
     {
       int offset = 0;
       offset += this->header.deserialize(inbuffer + offset);
-      uint32_t axes_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      axes_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      axes_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      axes_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t axes_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      axes_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      axes_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      axes_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->axes_length);
       if(axes_lengthT > axes_length)
         this->axes = (float*)realloc(this->axes, axes_lengthT * sizeof(float));
@@ -98,10 +98,10 @@ namespace sensor_msgs
       offset += sizeof(this->st_axes);
         memcpy( &(this->axes[i]), &(this->st_axes), sizeof(float));
       }
-      uint32_t buttons_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      buttons_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      buttons_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      buttons_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t buttons_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      buttons_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      buttons_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      buttons_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->buttons_length);
       if(buttons_lengthT > buttons_length)
         this->buttons = (int32_t*)realloc(this->buttons, buttons_lengthT * sizeof(int32_t));

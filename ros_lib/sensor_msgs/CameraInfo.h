@@ -176,10 +176,10 @@ namespace sensor_msgs
       inbuffer[offset+length_distortion_model-1]=0;
       this->distortion_model = (char *)(inbuffer + offset-1);
       offset += length_distortion_model;
-      uint32_t D_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      D_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      D_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      D_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t D_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      D_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      D_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      D_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->D_length);
       if(D_lengthT > D_length)
         this->D = (double*)realloc(this->D, D_lengthT * sizeof(double));

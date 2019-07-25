@@ -130,10 +130,10 @@ static const char REQUESTPARAM[] = "rosserial_msgs/RequestParam";
     virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
-      uint32_t ints_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      ints_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      ints_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      ints_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t ints_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      ints_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      ints_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      ints_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->ints_length);
       if(ints_lengthT > ints_length)
         this->ints = (int32_t*)realloc(this->ints, ints_lengthT * sizeof(int32_t));
@@ -152,10 +152,10 @@ static const char REQUESTPARAM[] = "rosserial_msgs/RequestParam";
       offset += sizeof(this->st_ints);
         memcpy( &(this->ints[i]), &(this->st_ints), sizeof(int32_t));
       }
-      uint32_t floats_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      floats_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      floats_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      floats_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t floats_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      floats_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      floats_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      floats_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->floats_length);
       if(floats_lengthT > floats_length)
         this->floats = (float*)realloc(this->floats, floats_lengthT * sizeof(float));
@@ -174,10 +174,10 @@ static const char REQUESTPARAM[] = "rosserial_msgs/RequestParam";
       offset += sizeof(this->st_floats);
         memcpy( &(this->floats[i]), &(this->st_floats), sizeof(float));
       }
-      uint32_t strings_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      strings_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      strings_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      strings_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t strings_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      strings_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      strings_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      strings_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->strings_length);
       if(strings_lengthT > strings_length)
         this->strings = (char**)realloc(this->strings, strings_lengthT * sizeof(char*));

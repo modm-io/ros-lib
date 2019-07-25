@@ -68,10 +68,10 @@ namespace smach_msgs
       inbuffer[offset+length_path-1]=0;
       this->path = (char *)(inbuffer + offset-1);
       offset += length_path;
-      uint32_t initial_states_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      initial_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      initial_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      initial_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t initial_states_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      initial_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      initial_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      initial_states_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->initial_states_length);
       if(initial_states_lengthT > initial_states_length)
         this->initial_states = (char**)realloc(this->initial_states, initial_states_lengthT * sizeof(char*));

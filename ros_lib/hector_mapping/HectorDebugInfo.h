@@ -40,10 +40,10 @@ namespace hector_mapping
     virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
-      uint32_t iterData_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      iterData_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      iterData_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      iterData_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t iterData_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      iterData_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      iterData_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      iterData_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->iterData_length);
       if(iterData_lengthT > iterData_length)
         this->iterData = (hector_mapping::HectorIterData*)realloc(this->iterData, iterData_lengthT * sizeof(hector_mapping::HectorIterData));

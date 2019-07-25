@@ -199,10 +199,10 @@ static const char GETMODELPROPERTIES[] = "gazebo_msgs/GetModelProperties";
       inbuffer[offset+length_canonical_body_name-1]=0;
       this->canonical_body_name = (char *)(inbuffer + offset-1);
       offset += length_canonical_body_name;
-      uint32_t body_names_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      body_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      body_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      body_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t body_names_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      body_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      body_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      body_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->body_names_length);
       if(body_names_lengthT > body_names_length)
         this->body_names = (char**)realloc(this->body_names, body_names_lengthT * sizeof(char*));
@@ -219,10 +219,10 @@ static const char GETMODELPROPERTIES[] = "gazebo_msgs/GetModelProperties";
       offset += length_st_body_names;
         memcpy( &(this->body_names[i]), &(this->st_body_names), sizeof(char*));
       }
-      uint32_t geom_names_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      geom_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      geom_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      geom_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t geom_names_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      geom_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      geom_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      geom_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->geom_names_length);
       if(geom_names_lengthT > geom_names_length)
         this->geom_names = (char**)realloc(this->geom_names, geom_names_lengthT * sizeof(char*));
@@ -239,10 +239,10 @@ static const char GETMODELPROPERTIES[] = "gazebo_msgs/GetModelProperties";
       offset += length_st_geom_names;
         memcpy( &(this->geom_names[i]), &(this->st_geom_names), sizeof(char*));
       }
-      uint32_t joint_names_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t joint_names_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      joint_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->joint_names_length);
       if(joint_names_lengthT > joint_names_length)
         this->joint_names = (char**)realloc(this->joint_names, joint_names_lengthT * sizeof(char*));
@@ -259,10 +259,10 @@ static const char GETMODELPROPERTIES[] = "gazebo_msgs/GetModelProperties";
       offset += length_st_joint_names;
         memcpy( &(this->joint_names[i]), &(this->st_joint_names), sizeof(char*));
       }
-      uint32_t child_model_names_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      child_model_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      child_model_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      child_model_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t child_model_names_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      child_model_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      child_model_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      child_model_names_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->child_model_names_length);
       if(child_model_names_lengthT > child_model_names_length)
         this->child_model_names = (char**)realloc(this->child_model_names, child_model_names_lengthT * sizeof(char*));

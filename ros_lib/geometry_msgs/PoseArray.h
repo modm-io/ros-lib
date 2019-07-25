@@ -46,10 +46,10 @@ namespace geometry_msgs
     {
       int offset = 0;
       offset += this->header.deserialize(inbuffer + offset);
-      uint32_t poses_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      poses_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      poses_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      poses_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t poses_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      poses_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      poses_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      poses_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->poses_length);
       if(poses_lengthT > poses_length)
         this->poses = (geometry_msgs::Pose*)realloc(this->poses, poses_lengthT * sizeof(geometry_msgs::Pose));

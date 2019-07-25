@@ -120,10 +120,10 @@ static const char NODELETLOAD[] = "nodelet/NodeletLoad";
       inbuffer[offset+length_type-1]=0;
       this->type = (char *)(inbuffer + offset-1);
       offset += length_type;
-      uint32_t remap_source_args_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      remap_source_args_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      remap_source_args_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      remap_source_args_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t remap_source_args_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      remap_source_args_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      remap_source_args_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      remap_source_args_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->remap_source_args_length);
       if(remap_source_args_lengthT > remap_source_args_length)
         this->remap_source_args = (char**)realloc(this->remap_source_args, remap_source_args_lengthT * sizeof(char*));
@@ -140,10 +140,10 @@ static const char NODELETLOAD[] = "nodelet/NodeletLoad";
       offset += length_st_remap_source_args;
         memcpy( &(this->remap_source_args[i]), &(this->st_remap_source_args), sizeof(char*));
       }
-      uint32_t remap_target_args_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      remap_target_args_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      remap_target_args_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      remap_target_args_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t remap_target_args_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      remap_target_args_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      remap_target_args_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      remap_target_args_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->remap_target_args_length);
       if(remap_target_args_lengthT > remap_target_args_length)
         this->remap_target_args = (char**)realloc(this->remap_target_args, remap_target_args_lengthT * sizeof(char*));
@@ -160,10 +160,10 @@ static const char NODELETLOAD[] = "nodelet/NodeletLoad";
       offset += length_st_remap_target_args;
         memcpy( &(this->remap_target_args[i]), &(this->st_remap_target_args), sizeof(char*));
       }
-      uint32_t my_argv_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      my_argv_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      my_argv_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      my_argv_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t my_argv_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      my_argv_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      my_argv_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      my_argv_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->my_argv_length);
       if(my_argv_lengthT > my_argv_length)
         this->my_argv = (char**)realloc(this->my_argv, my_argv_lengthT * sizeof(char*));

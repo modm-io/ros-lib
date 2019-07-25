@@ -40,10 +40,10 @@ namespace tf
     virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
-      uint32_t transforms_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      transforms_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      transforms_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      transforms_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t transforms_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      transforms_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      transforms_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      transforms_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->transforms_length);
       if(transforms_lengthT > transforms_length)
         this->transforms = (geometry_msgs::TransformStamped*)realloc(this->transforms, transforms_lengthT * sizeof(geometry_msgs::TransformStamped));

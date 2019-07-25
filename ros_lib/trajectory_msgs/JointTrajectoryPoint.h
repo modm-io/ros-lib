@@ -144,10 +144,10 @@ namespace trajectory_msgs
     virtual int deserialize(unsigned char *inbuffer)
     {
       int offset = 0;
-      uint32_t positions_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      positions_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      positions_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      positions_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t positions_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      positions_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      positions_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      positions_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->positions_length);
       if(positions_lengthT > positions_length)
         this->positions = (double*)realloc(this->positions, positions_lengthT * sizeof(double));
@@ -170,10 +170,10 @@ namespace trajectory_msgs
       offset += sizeof(this->st_positions);
         memcpy( &(this->positions[i]), &(this->st_positions), sizeof(double));
       }
-      uint32_t velocities_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t velocities_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      velocities_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->velocities_length);
       if(velocities_lengthT > velocities_length)
         this->velocities = (double*)realloc(this->velocities, velocities_lengthT * sizeof(double));
@@ -196,10 +196,10 @@ namespace trajectory_msgs
       offset += sizeof(this->st_velocities);
         memcpy( &(this->velocities[i]), &(this->st_velocities), sizeof(double));
       }
-      uint32_t accelerations_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      accelerations_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      accelerations_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      accelerations_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t accelerations_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      accelerations_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      accelerations_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      accelerations_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->accelerations_length);
       if(accelerations_lengthT > accelerations_length)
         this->accelerations = (double*)realloc(this->accelerations, accelerations_lengthT * sizeof(double));
@@ -222,10 +222,10 @@ namespace trajectory_msgs
       offset += sizeof(this->st_accelerations);
         memcpy( &(this->accelerations[i]), &(this->st_accelerations), sizeof(double));
       }
-      uint32_t effort_lengthT = ((uint32_t) (*(inbuffer + offset))); 
-      effort_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1); 
-      effort_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2); 
-      effort_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3); 
+      uint32_t effort_lengthT = ((uint32_t) (*(inbuffer + offset)));
+      effort_lengthT |= ((uint32_t) (*(inbuffer + offset + 1))) << (8 * 1);
+      effort_lengthT |= ((uint32_t) (*(inbuffer + offset + 2))) << (8 * 2);
+      effort_lengthT |= ((uint32_t) (*(inbuffer + offset + 3))) << (8 * 3);
       offset += sizeof(this->effort_length);
       if(effort_lengthT > effort_length)
         this->effort = (double*)realloc(this->effort, effort_lengthT * sizeof(double));
