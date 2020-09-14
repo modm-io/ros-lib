@@ -1,4 +1,4 @@
-FROM ros:kinetic-perception-xenial
+FROM ros:melodic-perception-bionic
 
 # Copy the used files from the repository to the image
 # Gitlab CI clones the repo into the docker container
