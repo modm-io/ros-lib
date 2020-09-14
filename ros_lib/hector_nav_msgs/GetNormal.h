@@ -23,22 +23,22 @@ static const char GETNORMAL[] = "hector_nav_msgs/GetNormal";
     {
     }
 
-    virtual int serialize(unsigned char *outbuffer) const
+    virtual int serialize(unsigned char *outbuffer) const override
     {
       int offset = 0;
       offset += this->point.serialize(outbuffer + offset);
       return offset;
     }
 
-    virtual int deserialize(unsigned char *inbuffer)
+    virtual int deserialize(unsigned char *inbuffer) override
     {
       int offset = 0;
       offset += this->point.deserialize(inbuffer + offset);
      return offset;
     }
 
-    const char * getType(){ return GETNORMAL; };
-    const char * getMD5(){ return "47dfdbd810b48d0a47b7ad67e4191bcc"; };
+    virtual const char * getType() override { return GETNORMAL; };
+    virtual const char * getMD5() override { return "47dfdbd810b48d0a47b7ad67e4191bcc"; };
 
   };
 
@@ -53,22 +53,22 @@ static const char GETNORMAL[] = "hector_nav_msgs/GetNormal";
     {
     }
 
-    virtual int serialize(unsigned char *outbuffer) const
+    virtual int serialize(unsigned char *outbuffer) const override
     {
       int offset = 0;
       offset += this->normal.serialize(outbuffer + offset);
       return offset;
     }
 
-    virtual int deserialize(unsigned char *inbuffer)
+    virtual int deserialize(unsigned char *inbuffer) override
     {
       int offset = 0;
       offset += this->normal.deserialize(inbuffer + offset);
      return offset;
     }
 
-    const char * getType(){ return GETNORMAL; };
-    const char * getMD5(){ return "9a5880458dbcd28bf7ed1889c8ac7f8e"; };
+    virtual const char * getType() override { return GETNORMAL; };
+    virtual const char * getMD5() override { return "9a5880458dbcd28bf7ed1889c8ac7f8e"; };
 
   };
 

@@ -27,7 +27,7 @@ static const char GETRECOVERYINFO[] = "hector_nav_msgs/GetRecoveryInfo";
     {
     }
 
-    virtual int serialize(unsigned char *outbuffer) const
+    virtual int serialize(unsigned char *outbuffer) const override
     {
       int offset = 0;
       *(outbuffer + offset + 0) = (this->request_time.sec >> (8 * 0)) & 0xFF;
@@ -57,7 +57,7 @@ static const char GETRECOVERYINFO[] = "hector_nav_msgs/GetRecoveryInfo";
       return offset;
     }
 
-    virtual int deserialize(unsigned char *inbuffer)
+    virtual int deserialize(unsigned char *inbuffer) override
     {
       int offset = 0;
       this->request_time.sec =  ((uint32_t) (*(inbuffer + offset)));
@@ -88,8 +88,8 @@ static const char GETRECOVERYINFO[] = "hector_nav_msgs/GetRecoveryInfo";
      return offset;
     }
 
-    const char * getType(){ return GETRECOVERYINFO; };
-    const char * getMD5(){ return "3916a0c55958d5dd43204cd2fe5608f6"; };
+    virtual const char * getType() override { return GETRECOVERYINFO; };
+    virtual const char * getMD5() override { return "3916a0c55958d5dd43204cd2fe5608f6"; };
 
   };
 
@@ -110,7 +110,7 @@ static const char GETRECOVERYINFO[] = "hector_nav_msgs/GetRecoveryInfo";
     {
     }
 
-    virtual int serialize(unsigned char *outbuffer) const
+    virtual int serialize(unsigned char *outbuffer) const override
     {
       int offset = 0;
       offset += this->trajectory_radius_entry_pose_to_req_pose.serialize(outbuffer + offset);
@@ -119,7 +119,7 @@ static const char GETRECOVERYINFO[] = "hector_nav_msgs/GetRecoveryInfo";
       return offset;
     }
 
-    virtual int deserialize(unsigned char *inbuffer)
+    virtual int deserialize(unsigned char *inbuffer) override
     {
       int offset = 0;
       offset += this->trajectory_radius_entry_pose_to_req_pose.deserialize(inbuffer + offset);
@@ -128,8 +128,8 @@ static const char GETRECOVERYINFO[] = "hector_nav_msgs/GetRecoveryInfo";
      return offset;
     }
 
-    const char * getType(){ return GETRECOVERYINFO; };
-    const char * getMD5(){ return "a93581be8e34e3c09aeafc6b9b990ad5"; };
+    virtual const char * getType() override { return GETRECOVERYINFO; };
+    virtual const char * getMD5() override { return "a93581be8e34e3c09aeafc6b9b990ad5"; };
 
   };
 

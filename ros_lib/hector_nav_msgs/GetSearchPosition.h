@@ -25,7 +25,7 @@ static const char GETSEARCHPOSITION[] = "hector_nav_msgs/GetSearchPosition";
     {
     }
 
-    virtual int serialize(unsigned char *outbuffer) const
+    virtual int serialize(unsigned char *outbuffer) const override
     {
       int offset = 0;
       offset += this->ooi_pose.serialize(outbuffer + offset);
@@ -42,7 +42,7 @@ static const char GETSEARCHPOSITION[] = "hector_nav_msgs/GetSearchPosition";
       return offset;
     }
 
-    virtual int deserialize(unsigned char *inbuffer)
+    virtual int deserialize(unsigned char *inbuffer) override
     {
       int offset = 0;
       offset += this->ooi_pose.deserialize(inbuffer + offset);
@@ -60,8 +60,8 @@ static const char GETSEARCHPOSITION[] = "hector_nav_msgs/GetSearchPosition";
      return offset;
     }
 
-    const char * getType(){ return GETSEARCHPOSITION; };
-    const char * getMD5(){ return "a579e8b989d066f6c17946ab060a6ff9"; };
+    virtual const char * getType() override { return GETSEARCHPOSITION; };
+    virtual const char * getMD5() override { return "a579e8b989d066f6c17946ab060a6ff9"; };
 
   };
 
@@ -76,22 +76,22 @@ static const char GETSEARCHPOSITION[] = "hector_nav_msgs/GetSearchPosition";
     {
     }
 
-    virtual int serialize(unsigned char *outbuffer) const
+    virtual int serialize(unsigned char *outbuffer) const override
     {
       int offset = 0;
       offset += this->search_pose.serialize(outbuffer + offset);
       return offset;
     }
 
-    virtual int deserialize(unsigned char *inbuffer)
+    virtual int deserialize(unsigned char *inbuffer) override
     {
       int offset = 0;
       offset += this->search_pose.deserialize(inbuffer + offset);
      return offset;
     }
 
-    const char * getType(){ return GETSEARCHPOSITION; };
-    const char * getMD5(){ return "6cc90c22cc49490b4dd1ef4798491231"; };
+    virtual const char * getType() override { return GETSEARCHPOSITION; };
+    virtual const char * getMD5() override { return "6cc90c22cc49490b4dd1ef4798491231"; };
 
   };
 

@@ -31,7 +31,7 @@ namespace hector_mapping
     {
     }
 
-    virtual int serialize(unsigned char *outbuffer) const
+    virtual int serialize(unsigned char *outbuffer) const override
     {
       int offset = 0;
       for( uint32_t i = 0; i < 9; i++){
@@ -109,7 +109,7 @@ namespace hector_mapping
       return offset;
     }
 
-    virtual int deserialize(unsigned char *inbuffer)
+    virtual int deserialize(unsigned char *inbuffer) override
     {
       int offset = 0;
       for( uint32_t i = 0; i < 9; i++){
@@ -192,8 +192,8 @@ namespace hector_mapping
      return offset;
     }
 
-    const char * getType(){ return "hector_mapping/HectorIterData"; };
-    const char * getMD5(){ return "ecedaa7e26b5fc817a1add44c17fec5f"; };
+    virtual const char * getType() override { return "hector_mapping/HectorIterData"; };
+    virtual const char * getMD5() override { return "ecedaa7e26b5fc817a1add44c17fec5f"; };
 
   };
 

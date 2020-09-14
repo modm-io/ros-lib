@@ -19,20 +19,20 @@ static const char GETROBOTTRAJECTORY[] = "hector_nav_msgs/GetRobotTrajectory";
     {
     }
 
-    virtual int serialize(unsigned char *outbuffer) const
+    virtual int serialize(unsigned char *outbuffer) const override
     {
       int offset = 0;
       return offset;
     }
 
-    virtual int deserialize(unsigned char *inbuffer)
+    virtual int deserialize(unsigned char *inbuffer) override
     {
       int offset = 0;
      return offset;
     }
 
-    const char * getType(){ return GETROBOTTRAJECTORY; };
-    const char * getMD5(){ return "d41d8cd98f00b204e9800998ecf8427e"; };
+    virtual const char * getType() override { return GETROBOTTRAJECTORY; };
+    virtual const char * getMD5() override { return "d41d8cd98f00b204e9800998ecf8427e"; };
 
   };
 
@@ -47,22 +47,22 @@ static const char GETROBOTTRAJECTORY[] = "hector_nav_msgs/GetRobotTrajectory";
     {
     }
 
-    virtual int serialize(unsigned char *outbuffer) const
+    virtual int serialize(unsigned char *outbuffer) const override
     {
       int offset = 0;
       offset += this->trajectory.serialize(outbuffer + offset);
       return offset;
     }
 
-    virtual int deserialize(unsigned char *inbuffer)
+    virtual int deserialize(unsigned char *inbuffer) override
     {
       int offset = 0;
       offset += this->trajectory.deserialize(inbuffer + offset);
      return offset;
     }
 
-    const char * getType(){ return GETROBOTTRAJECTORY; };
-    const char * getMD5(){ return "c7bd40129c5786fc26351edbd33b8d33"; };
+    virtual const char * getType() override { return GETROBOTTRAJECTORY; };
+    virtual const char * getMD5() override { return "c7bd40129c5786fc26351edbd33b8d33"; };
 
   };
 

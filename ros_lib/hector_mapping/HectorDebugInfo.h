@@ -19,11 +19,11 @@ namespace hector_mapping
       _iterData_type * iterData;
 
     HectorDebugInfo():
-      iterData_length(0), iterData(NULL)
+      iterData_length(0), st_iterData(), iterData(nullptr)
     {
     }
 
-    virtual int serialize(unsigned char *outbuffer) const
+    virtual int serialize(unsigned char *outbuffer) const override
     {
       int offset = 0;
       *(outbuffer + offset + 0) = (this->iterData_length >> (8 * 0)) & 0xFF;
@@ -37,7 +37,7 @@ namespace hector_mapping
       return offset;
     }
 
-    virtual int deserialize(unsigned char *inbuffer)
+    virtual int deserialize(unsigned char *inbuffer) override
     {
       int offset = 0;
       uint32_t iterData_lengthT = ((uint32_t) (*(inbuffer + offset)));
@@ -55,8 +55,8 @@ namespace hector_mapping
      return offset;
     }
 
-    const char * getType(){ return "hector_mapping/HectorDebugInfo"; };
-    const char * getMD5(){ return "4d33c0696c0c536f5c1447c260756674"; };
+    virtual const char * getType() override { return "hector_mapping/HectorDebugInfo"; };
+    virtual const char * getMD5() override { return "4d33c0696c0c536f5c1447c260756674"; };
 
   };
 

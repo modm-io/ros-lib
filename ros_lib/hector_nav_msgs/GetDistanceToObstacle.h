@@ -22,22 +22,22 @@ static const char GETDISTANCETOOBSTACLE[] = "hector_nav_msgs/GetDistanceToObstac
     {
     }
 
-    virtual int serialize(unsigned char *outbuffer) const
+    virtual int serialize(unsigned char *outbuffer) const override
     {
       int offset = 0;
       offset += this->point.serialize(outbuffer + offset);
       return offset;
     }
 
-    virtual int deserialize(unsigned char *inbuffer)
+    virtual int deserialize(unsigned char *inbuffer) override
     {
       int offset = 0;
       offset += this->point.deserialize(inbuffer + offset);
      return offset;
     }
 
-    const char * getType(){ return GETDISTANCETOOBSTACLE; };
-    const char * getMD5(){ return "47dfdbd810b48d0a47b7ad67e4191bcc"; };
+    virtual const char * getType() override { return GETDISTANCETOOBSTACLE; };
+    virtual const char * getMD5() override { return "47dfdbd810b48d0a47b7ad67e4191bcc"; };
 
   };
 
@@ -55,7 +55,7 @@ static const char GETDISTANCETOOBSTACLE[] = "hector_nav_msgs/GetDistanceToObstac
     {
     }
 
-    virtual int serialize(unsigned char *outbuffer) const
+    virtual int serialize(unsigned char *outbuffer) const override
     {
       int offset = 0;
       union {
@@ -72,7 +72,7 @@ static const char GETDISTANCETOOBSTACLE[] = "hector_nav_msgs/GetDistanceToObstac
       return offset;
     }
 
-    virtual int deserialize(unsigned char *inbuffer)
+    virtual int deserialize(unsigned char *inbuffer) override
     {
       int offset = 0;
       union {
@@ -90,8 +90,8 @@ static const char GETDISTANCETOOBSTACLE[] = "hector_nav_msgs/GetDistanceToObstac
      return offset;
     }
 
-    const char * getType(){ return GETDISTANCETOOBSTACLE; };
-    const char * getMD5(){ return "019a8fc3bf7fd73c014dc08523397f1c"; };
+    virtual const char * getType() override { return GETDISTANCETOOBSTACLE; };
+    virtual const char * getMD5() override { return "019a8fc3bf7fd73c014dc08523397f1c"; };
 
   };
 

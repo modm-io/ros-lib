@@ -38,7 +38,7 @@ namespace can_msgs
     {
     }
 
-    virtual int serialize(unsigned char *outbuffer) const
+    virtual int serialize(unsigned char *outbuffer) const override
     {
       int offset = 0;
       offset += this->header.serialize(outbuffer + offset);
@@ -77,7 +77,7 @@ namespace can_msgs
       return offset;
     }
 
-    virtual int deserialize(unsigned char *inbuffer)
+    virtual int deserialize(unsigned char *inbuffer) override
     {
       int offset = 0;
       offset += this->header.deserialize(inbuffer + offset);
@@ -119,8 +119,8 @@ namespace can_msgs
      return offset;
     }
 
-    const char * getType(){ return "can_msgs/Frame"; };
-    const char * getMD5(){ return "64ae5cebf967dc6aae4e78f5683a5b25"; };
+    virtual const char * getType() override { return "can_msgs/Frame"; };
+    virtual const char * getMD5() override { return "64ae5cebf967dc6aae4e78f5683a5b25"; };
 
   };
 
